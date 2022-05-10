@@ -1,6 +1,7 @@
 package com.mysite.inylog;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Entity
 @Getter
+@Setter
 public class Post {
 
     @Id @GeneratedValue
@@ -19,10 +21,12 @@ public class Post {
     @JoinColumn(name = "member_id")
     private Member member;
 
+    private String contents;
+
     @OneToMany(mappedBy = "post")
     private List<Comment> comments = new ArrayList<>();
 
-    @OneToMany(mappedBy = "post")
-    private List<PostCategory> postCategories = new ArrayList<>();
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private Category category;
 }

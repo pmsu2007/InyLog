@@ -2,6 +2,7 @@ package com.mysite.inylog;
 
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Entity
 @Getter
+@Setter
 public class Member {
 
     @Id @GeneratedValue
@@ -19,5 +21,4 @@ public class Member {
 
     @OneToMany(mappedBy = "member")
     private List<Post> posts = new ArrayList<>();
-
 }

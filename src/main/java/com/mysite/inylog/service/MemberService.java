@@ -18,5 +18,4 @@ public class MemberService {
         memberRepository.save(member);
         return member.getId();
     }
-
 }
