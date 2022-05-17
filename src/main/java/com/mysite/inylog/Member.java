@@ -17,8 +17,20 @@ public class Member {
     @Column(name = "member_id")
     private Long id;
 
-    private String name;
+    @Column(length = 30)
+    private String userId;
 
-    @OneToMany(mappedBy = "member")
-    private List<Post> posts = new ArrayList<>();
+    @Column(unique = true)
+    private String email;
+
+    private String imageURL;
+
+    //private ArrayList followerList = new ArrayList();
+
+//    @OneToMany(mappedBy = "member")
+//    private List<Post> posts = new ArrayList<>();
+
+    //private List<Long> followerList = new ArrayList<>();
+
+
 }

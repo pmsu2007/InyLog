@@ -1,20 +1,7 @@
 package com.mysite.inylog.repository;
 
-
 import com.mysite.inylog.Member;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import javax.persistence.EntityManager;
-
-@Repository
-@RequiredArgsConstructor
-public class MemberRepository {
-
-    private final EntityManager em;
-
-    public void save(Member member) {
-        em.persist(member);
-    }
-
+public interface MemberRepository extends JpaRepository<Member, Long> {
 }
