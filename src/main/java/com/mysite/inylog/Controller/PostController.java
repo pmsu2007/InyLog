@@ -1,7 +1,7 @@
 package com.mysite.inylog.Controller;
 
 
-import com.mysite.inylog.Post;
+import com.mysite.inylog.domain.Post;
 import com.mysite.inylog.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

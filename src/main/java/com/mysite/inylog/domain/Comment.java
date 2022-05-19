@@ -1,4 +1,4 @@
-package com.mysite.inylog;
+package com.mysite.inylog.domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +13,7 @@ public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "comment_id")
     private Long id;
 
     @Column( columnDefinition = "TEXT")
@@ -23,8 +24,8 @@ public class Comment {
     @ManyToOne(fetch = FetchType.LAZY)
     private Post post;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "member_id")
-//    private Member member;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
 
 }

@@ -1,4 +1,4 @@
-package com.mysite.inylog;
+package com.mysite.inylog.domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,6 +16,12 @@ public class Category {
     @Column(name = "category_id")
     private Long id;
 
+    private String categoryName;
+
     @OneToMany(mappedBy = "category")
     private List<Post> posts = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
 }

@@ -1,6 +1,6 @@
 package com.mysite.inylog.service;
 
-import com.mysite.inylog.Post;
+import com.mysite.inylog.domain.Post;
 import com.mysite.inylog.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

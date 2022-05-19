@@ -1,4 +1,4 @@
-package com.mysite.inylog;
+package com.mysite.inylog.domain;
 
 
 import lombok.Getter;
@@ -25,12 +25,17 @@ public class Member {
 
     private String imageURL;
 
+    @OneToMany(mappedBy = "member")
+    private List<Category> categories;
+
     //private ArrayList followerList = new ArrayList();
 
-//    @OneToMany(mappedBy = "member")
-//    private List<Post> posts = new ArrayList<>();
+    @OneToMany(mappedBy = "member")
+    private List<Post> posts = new ArrayList<>();
 
     //private List<Long> followerList = new ArrayList<>();
 
+    @OneToMany(mappedBy = "member")
+    private List<Comment> comments = new ArrayList<>();
 
 }

@@ -1,8 +1,8 @@
 package com.mysite.inylog.service;
 
 
-import com.mysite.inylog.Comment;
-import com.mysite.inylog.Post;
+import com.mysite.inylog.domain.Comment;
+import com.mysite.inylog.domain.Post;
 import com.mysite.inylog.repository.CommentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
