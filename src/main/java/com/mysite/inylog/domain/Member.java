@@ -28,14 +28,11 @@ public class Member {
     @OneToMany(mappedBy = "member")
     private List<Category> categories;
 
-    //private ArrayList followerList = new ArrayList();
-
     @OneToMany(mappedBy = "member")
     private List<Post> posts = new ArrayList<>();
 
-    //private List<Long> followerList = new ArrayList<>();
-
     @OneToMany(mappedBy = "member")
     private List<Comment> comments = new ArrayList<>();
+
 
 }

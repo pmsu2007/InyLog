@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -28,4 +29,6 @@ public class Comment {
     @JoinColumn(name = "member_id")
     private Member member;
 
+    @ManyToMany
+    Set<Member> recommender;
 }

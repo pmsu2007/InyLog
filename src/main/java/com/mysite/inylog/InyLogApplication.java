@@ -9,5 +9,4 @@ public class InyLogApplication {
     public static void main(String[] args) {
         SpringApplication.run(InyLogApplication.class, args);
     }
-
 }
