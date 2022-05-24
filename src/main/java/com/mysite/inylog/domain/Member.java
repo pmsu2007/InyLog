@@ -34,5 +34,6 @@ public class Member {
     @OneToMany(mappedBy = "member")
     private List<Comment> comments = new ArrayList<>();
 
-
+    @OneToMany
+    private List<Alarm> alarms = new ArrayList<>();
 }

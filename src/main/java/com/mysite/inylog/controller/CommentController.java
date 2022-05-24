@@ -12,6 +12,4 @@ public class CommentController {
     private final PostRepository postRepository;
     private final CommentRepository commentRepository;
 
-
-
 }
