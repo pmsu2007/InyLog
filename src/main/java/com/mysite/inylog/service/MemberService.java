@@ -3,6 +3,8 @@ package com.mysite.inylog.service;
 import com.mysite.inylog.domain.Member;
 import com.mysite.inylog.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
@@ -10,14 +12,14 @@ import org.springframework.stereotype.Service;
 public class MemberService {
 
     private final MemberRepository memberRepository;
+    private final PasswordEncoder passwordEncoder;
 
     //회원가입
-    public Member create(String newUserId, String newEmail, String newPassWord){
+    public Member create(String newUserId, String newEmail, String newPassword){
         Member member = new Member();
-        member.setEmail(newEmail);
         member.setUserId(newUserId);
-        //보안 문제 논의
-        //member.setPassword(newPassWord);
+        member.setEmail(newEmail);
+        member.setPassword(passwordEncoder.encode(newPassword));
         this.memberRepository.save(member);
         return member;
     }

@@ -25,6 +25,8 @@ public class Member {
 
     private String imageURL;
 
+    private String password;
+
     @OneToMany(mappedBy = "member")
     private List<Category> categories;
 
