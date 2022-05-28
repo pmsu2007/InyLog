@@ -1,22 +1,30 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
-  <!-- sbb CSS -->
-  <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
-  <title>Hello, sbb!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{css/blog_main.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{css/nav.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{css/sidebar.css}">
 </head>
 <body>
-<!-- 네비게이션바 -->
-<nav th:replace="navbar :: navbarFragment"></nav>
-<!-- 기본 템플릿 안에 삽입될 내용 Start -->
-<th:block layout:fragment="content"></th:block>
-<!-- 기본 템플릿 안에 삽입될 내용 End -->
+<!-- Navigation Start -->
+<nav th:replace="nav"></nav>
+<!-- Navigation End -->
+
+<!-- Side Bar Start -->
+<!-- Side Bar End -->
+
+<!-- Main Start -->
+<th:block layout:fragment="blogMain"></th:block>
+<!-- Main End -->
+
+<!-- Footer Start -->
+<!-- Footer End -->
+
 <!-- Bootstrap JS -->
-<script th:src="@{/bootstrap.min.js}"></script>
+<script th:src="@{js/bootstrap.min.js}"></script>
 </body>
 </html>
