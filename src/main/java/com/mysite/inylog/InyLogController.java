@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class InyLogController {
-    @RequestMapping("/home")
-    @ResponseBody
-    public String hello() {
-        return "Hello InyLog";
+    @RequestMapping("/")
+    public String blog() {
+        return "blog_main";
     }
 }

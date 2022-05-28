@@ -1,0 +1,33 @@
+.nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
+}
+
+.nav-logo-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo > img {
+    width: 150px;
+    height: 100px;
+}
+
+.nav-menu-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    padding: 0 20px;
+    color: #636464;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-item > img {
+    width: 25px;
+    height: 25px;
+}
