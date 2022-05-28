@@ -1,0 +1,101 @@
+body{
+  text-align: center;
+}
+
+.navi{
+  flex-wrap: nowrap;
+  display: flex;
+  margin: 20px;
+  margin-bottom: 60px;
+  max-height: 60px;
+}
+
+.navi .mainLogo{
+  width: 200px;
+}
+
+.navi .search{
+  width: 120px;
+}
+
+.navi .naviSpace{
+  height: 60px;
+  width: 100%;
+}
+
+.navi .writing{
+  width: 120px;
+}
+
+.navi .logout{
+  width: 120px;
+}
+
+.navi .alram{
+  width: 60px;
+}
+
+.navi .myPage{
+  width: 60px;
+}
+
+.sideBar{
+  height: 500px;
+  width: 250px;
+  border: 1px solid black;
+  margin-left: 20px;
+
+}
+
+.sideBar .profilePicture{
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+
+}
+
+.sideBar .profile{
+  height: 250px;
+  width: 200px;
+  margin: 5%;
+  border: 1px solid white;
+  margin: auto;
+  
+}
+
+.sideBar .profile .idInfo {
+  border: 1px solid black;
+
+}
+
+.sideBar .profile .introduction{
+  border: 1px solid black;
+  height: 180px;
+}
+
+.sideBar .profile .followInfo{
+  border: 1px solid black;
+  display: flex;
+
+}
+
+.sideBar .profile .followInfo .follower{
+  border: 1px solid black;
+  flex-grow: 1;
+
+}
+
+.sideBar .profile .followInfo .following{
+  border: 1px solid black;
+  flex-grow: 1;
+
+}
+
+.sideBar .follow{
+  height: 30px;
+  width: 200px;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 10px;
+}
