@@ -4,21 +4,25 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" th:href="@{css/bootstrap.min.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{css/blog_main.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{css/nav.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{css/sidebar.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+    <!-- InyLog CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/blog_main.css}">
+    <link rel="styleshhet" type="text/css" th:href="@{/css/blog_list.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/sidebar.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/signup_form.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login_form.css}">
 </head>
 <body>
 <!-- Navigation Start -->
-<nav th:replace="nav"></nav>
+<nav th:replace="nav::navFragment"></nav>
 <!-- Navigation End -->
 
 <!-- Side Bar Start -->
 <!-- Side Bar End -->
 
 <!-- Main Start -->
-<th:block layout:fragment="blogMain"></th:block>
+<th:block layout:fragment="content"></th:block>
 <!-- Main End -->
 
 <!-- Footer Start -->
