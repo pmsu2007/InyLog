@@ -3,74 +3,74 @@
     <!-- side bar start-->
     <div th:replace="sidebar :: sidebar"></div>
     <!-- side bar end -->
-<div class="blog-wrap">
-    <div class="blog-header-wrap">
-        <!-- category bar start -->
-        <div class="blog-category-wrap">
-            <div class="blog-category">
-                <div class="category-item">
-                    전체 보기
-                </div>
-                <div class="category-item">
-                    카테고리1
-                </div>
-                <div class="category-item">
-                    카테고리2
-                </div>
-                <div class="category-item">
-                    +
+    <div class="blog-list-wrap">
+        <div class="blog-header-wrap">
+            <!-- category bar start -->
+            <div class="blog-category-wrap">
+                <div class="blog-category">
+                    <div class="category-item">
+                        전체 보기
+                    </div>
+                    <div class="category-item">
+                        카테고리1
+                    </div>
+                    <div class="category-item">
+                        카테고리2
+                    </div>
+                    <div class="category-item">
+                        +
+                    </div>
                 </div>
             </div>
+            <!-- category bar end -->
+            <!-- search bar start -->
+            <div class="blog-post-search">
+                <div class="blog-search">
+                    <input class="blog-search-input" type="text" name="keyword" placeholder="제목, 내용">
+                    <button type="button" class="blog-search-button">
+                        <img th:src="@{/img/search-icon.png}">
+                    </button>
+                </div>
+                <div class="blog-sorting">
+                    <select>
+                        <option>
+                            추천수
+                        </option>
+                        <option>
+                            댓글수
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <!-- search bar end -->
         </div>
-        <!-- category bar end -->
-        <!-- search bar start -->
-        <div class="blog-post-search">
-            <div class="blog-search">
-                <input class="blog-search-input" type="text" name="keyword" placeholder="제목, 내용">
-                <button type="button" class="blog-search-button">
-                    <img th:src="@{/img/search-icon.png}">
-                </button>
-            </div>
-            <div class="blog-sorting">
-                <select>
-                    <option>
+        <!-- post list start -->
+        <div class="blog-post-wrap">
+            <div class="blog-post-container">
+                <div class="blog-item-date">
+                    날짜
+                </div>
+                <div class="blog-item-title-wrap">
+                    <div class="blog-item-title">
+                        글 제목
+                    </div>
+                    <div class="blog-item-category">
+                        카테고리 명
+                    </div>
+                </div>
+                <div class="blog-item-content">
+                    글 내용
+                </div>
+                <div class="blog-item-meta-wrap">
+                    <div class="blog-meta-recommend">
                         추천수
-                    </option>
-                    <option>
-                        댓글수
-                    </option>
-                </select>
-            </div>
-        </div>
-        <!-- search bar end -->
-    </div>
-    <!-- post list start -->
-    <div class="blog-post-wrap">
-        <div class="blog-post-container">
-            <div class="blog-item-date">
-                날짜
-            </div>
-            <div class="blog-item-title-wrap">
-                <div class="blog-item-title">
-                    글 제목
-                </div>
-                <div class="blog-item-category">
-                    카테고리 명
-                </div>
-            </div>
-            <div class="blog-item-content">
-                글 내용
-            </div>
-            <div class="blog-item-meta-wrap">
-                <div class="blog-meta-recommend">
-                    추천수
-                </div>
-                <div class="blog-meta-comment">
-                    댓글 수
+                    </div>
+                    <div class="blog-meta-comment">
+                        댓글 수
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
+    </div>
 </html>

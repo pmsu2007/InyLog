@@ -1,11 +1,11 @@
-.blog-wrap {
+.blog-list-wrap {
     overflow: hidden;
     max-width: 1120px;
     margin: 0 auto;
 }
 
 @media screen and (max-width: 1060px) {
-    .blog-wrap {
+    .blog-list-wrap {
         display: flex;
         justify-content: center;
         flex-direction: column;

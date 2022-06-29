@@ -1,39 +1,59 @@
-<div class="info-bar">
-    <div class="info-bar-left">
-        <div class="info-id">@아이디</div>
-        <div class="info-time">작성시간</div>
-    </div>
-    <div class="info-bar-right">
-        <div class="info-modify">수정</div>
-        <div class="info-delete">삭제</div>
-    </div>
-</div>
-<div class="content">
-    <div class="content-title">제목</div>
-    <div class="content-writing">내용</div>
-</div>
-<div class="reaction">
-    <div class="reaction-bar">
-        <div class="reaction-heart">좋아요</div>
-        <div class="reaction-comment">댓글</div>
-    </div>
-    <div class="reaction-content">
-        <input type="text">
-        <button>등록</button>
-    </div>
-</div>
-<div class="reply-list">
-    <div class="reply-list-items">
-        <div class="reply-list-left">
-            <div class="reply-list-profile">
-                <img src="https://i.pinimg.com/736x/93/a6/8b/93a68b57a54e4bdc73d43d1d049b94b3.jpg" alt="유저 이미지">
+<html layout:decorate="~{layout}">
+<div layout:fragment="content">
+    <!-- side bar start -->
+    <div th:replace="sidebar :: sidebar"></div>
+    <!-- side bar end -->
+    <div class="blog-detail-wrap">
+        <div class="blog-detail-header-wrap">
+            <div class="blog-detail-header-meta">
+                <div class="blog-detail-header-date">작성시간</div>
+                <div class="blog-detail-header-user">아이디</div>
             </div>
-            <div class="reply-list-name">유저 이름</div>
-            <div class="reply-list-time">작성시간</div>
+            <!--
+            <div class="blog-detail-header-control">
+                <div class="blog-detail-header-delete">삭제</div>
+                <div class="blog-detail-header-modify">수정</div>
+            </div>
+            -->
         </div>
-        <div class="reply-list-right">
-            <div class="reply-list-modify">수정</div>
-            <div class="reply-list-delete">삭제</div>
+        <div class="blog-detail-content-wrap">
+            <div class="blog-detail-title">제목</div>
+            <div class="blog-detail-content">내용</div>
+        </div>
+        <div class="blog-detail-vote-wrap">
+            <div class="blog-detail-vote-cnt">
+                0
+            </div>
+            <div class="blog-detail-vote-btn">
+                <a>추천</a>
+            </div>
+        </div>
+        <form>
+            <div class="blog-detail-editor-wrap">
+                <textarea name="comment" class="blog-detail-editor" ></textarea>
+                <div class="blog-detail-editor-btn">
+                    <a>등록</a>
+                </div>
+            </div>
+        </form>
+        <div class="blog-detail-comment-container">
+            <div class="blog-detail-comment-item">
+                <div class="blog-detail-comment-profile">
+                    <div class="blog-detail-comment-icon">
+                        <img src="https://i.pinimg.com/736x/93/a6/8b/93a68b57a54e4bdc73d43d1d049b94b3.jpg" alt="유저 이미지">
+                    </div>
+                    <div class="blog-detail-comment-user">유저명</div>
+                    <div class="blog-detail-comment-date">작성시간</div>
+                </div>
+                <!--
+                <div class="blog-detail-comment-control">
+                    <div class="blog-detail-comment-delete">수정</div>
+                    <div class="blog-detail-comment-modify">삭제</div>
+                </div>
+                -->
+                <div class="blog-detail-comment-content">내용</div>
+            </div>
         </div>
     </div>
-    <div class="reply-list-content">댓글 내용</div>
+</div>
+</html>
